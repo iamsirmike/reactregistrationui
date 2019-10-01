@@ -28,6 +28,7 @@ class Registration extends Component{
             borderTopColor: "#949494",
             borderRadius: "5px",
             display: "inline-block"
+            
         };
         const form1 ={
             padding: "20px",

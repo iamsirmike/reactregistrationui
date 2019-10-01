@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import '../index.css'
 import { Modal, ModalHeader, ModalBody, Button, Container, Col, Row, Form, FormGroup, Input } from 'reactstrap'
 
 class Login extends Component{
@@ -19,11 +20,11 @@ class Login extends Component{
     render(){
         return(
             <div>
-            <center style={{color: "blueviolet"}}> <p onClick={this.toggle}>Already have an account? LOGIN</p></center>
+            <center style={{color: "blueviolet"}}> <p onClick={this.toggle} id="btn">Already have an account? LOGIN</p></center>
                 <Modal isOpen={this.state.modal} toggle={this.toggle}>
                 <ModalHeader toggle={this.toggle}></ModalHeader>
                 <ModalBody>
-                    
+                    //insert all codes here
                 </ModalBody>
                 </Modal>
             </div>
