@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import '../index.css'
-import { Modal, ModalHeader, ModalBody, Button, Container, Col, Row, Form, FormGroup, Input } from 'reactstrap'
+import { Modal, ModalBody, Button, Container, Col, Row, Form, FormGroup, Input } from 'reactstrap'
 
 class Login extends Component{
     constructor(props) {
@@ -16,6 +16,9 @@ class Login extends Component{
         this.setState(prevState => ({
           modal: !prevState.modal
         }));
+      }
+      login = (e) =>{
+        e.preventDefault();
       }
     render(){
       //styling
@@ -46,25 +49,24 @@ class Login extends Component{
             <div>
             <center style={{color: "blueviolet"}}> <p onClick={this.toggle} id="btn">Already have an account? LOGIN</p></center>
                 <Modal isOpen={this.state.modal} toggle={this.toggle}>
-                {/* <ModalHeader toggle={this.toggle}></ModalHeader> */}
                 <ModalBody>
                     <Container>
                         <Row>
                          <Col>
                           <div className="form2" style={form2}>
                             <center><h3>Login</h3></center>
-                            <Form>
+                            <Form onSubmit={this.login}>
                               <FormGroup>
                                 <Input type="email" id="email" className="email" placeholder="Email" style={input}/> 
                               </FormGroup>
                               <FormGroup>
-                                <Input type="passord" id="password" className="password" placeholder="Password" style={input}/> 
+                                <Input type="password" id="password" className="password" placeholder="Password" style={input}/> 
                               </FormGroup>
                               <FormGroup>
-                                    <Button style={button}>Login</Button>
+                                    <Button style={button} id="button">Login</Button>
                               </FormGroup>
                               <center style={{color: "#000000"}}>If you don't have an account click outside this box to close it and register.<br /> <br /></center><hr />
-                              <center style={seeU}>SEE YOU SOON</center>
+                              <center style={seeU}>COME BACK SOON</center>
                           </Form>
                           </div>
                          </Col>

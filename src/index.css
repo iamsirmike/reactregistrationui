@@ -42,12 +42,9 @@ body{
 #btn:hover{
   cursor: pointer;
 }
-/* #email{
-  width: "100%";
-  padding: "12px 20px";
-  margin: "2px 0";
-  border: "1px solid ##a6a6a6";
-  border-top-color: "#949494";
-  border-radius: "5px";
-  display: "inline-block";
-} */
+
+#button:hover{
+  background:transparent !important;
+  color: blueviolet;
+  border-color: blueviolet !important;
+}

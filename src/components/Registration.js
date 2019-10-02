@@ -14,6 +14,9 @@ class Registration extends Component{
         }
     
     }
+    register = (e) =>{
+        e.preventDefault()
+    }
     render(){
         //styling
         const h3 ={
@@ -51,7 +54,7 @@ class Registration extends Component{
                     <Col md="5">
                         <div className="form1" style={form1}>
                            <center> <h3 style={h3}>Join in Seconds</h3></center>
-                            <Form>
+                            <Form onSubmit={this.register}>
                                 <FormGroup>
                                     <Input type="text" name="fullname" id="fullname" placeholder="Full name" style={input} onChange={this.handleChange}/>
                                 </FormGroup>
@@ -62,7 +65,7 @@ class Registration extends Component{
                                     <Input type="password" name="password" id="password" placeholder="Create password" style={input} onChange={this.handleChange} />
                                 </FormGroup>
                                 <FormGroup>
-                                    <Button style={button}>Create your account</Button>
+                                    <Button style={button} id="button">Create your account</Button>
                                 </FormGroup>
                                 <center style={{color: "#000000"}}>By creating an account you accept our terms and conditions</center><hr />
                                 <Login /> 
